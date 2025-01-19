@@ -1,0 +1,41 @@
+@tailwind base;
+    @tailwind components;
+    @tailwind utilities;
+
+    body {
+      @apply bg-terminal-black text-matrix-green;
+    }
+
+    .glow-text {
+      @apply animate-glow;
+    }
+
+    .terminal-typing {
+      @apply overflow-hidden whitespace-nowrap border-r-2 border-matrix-green;
+      animation: typing 3.5s steps(40, end);
+    }
+
+    .easter-egg {
+      @apply opacity-0 hover:opacity-100 transition-opacity duration-1000;
+    }
+
+    .cyber-button {
+      @apply px-8 py-4 rounded-lg transition-all duration-300 transform hover:scale-105;
+      background: linear-gradient(45deg, #8a2be2, #ff00ff);
+      box-shadow: 0 0 15px rgba(138, 43, 226, 0.7);
+    }
+
+    .cyber-card {
+      @apply p-6 rounded-lg border-2 border-matrix-green/30 hover:border-neon-pink transition-all duration-300 transform hover:scale-105;
+      background: rgba(13, 2, 8, 0.8);
+      backdrop-filter: blur(10px);
+    }
+
+    .cyber-input {
+      @apply p-3 rounded-lg bg-terminal-black/50 border-2 border-matrix-green/30 focus:border-neon-pink focus:ring-0;
+      color: #00ff41;
+    }
+
+    .cyber-input::placeholder {
+      @apply text-matrix-green/50;
+    }
